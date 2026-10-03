@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aadya Anil Kumar — Data Engineer</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="index.html">Aadya Anil Kumar</a>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="pages/projects.html">Projects</a>
+      <a class="cta" href="mailto:off.aadyaanil@gmail.com">Say hello</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <canvas id="field"></canvas>
+  <div class="wrap hero-inner">
+    <div class="kicker">Vienna, Austria — MSc Data Science, TU Wien</div>
+    <h1 class="decode" data-text="I build the pipes data flows through, then stay up making sure nothing leaks.">I build the pipes data flows through, then stay up making sure nothing leaks.</h1>
+    <p class="lede">Two years keeping SAP systems alive for 50+ enterprise clients taught me how data breaks in production. Now I build the pipelines, so it doesn't.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="pages/projects.html">See the work</a>
+      <a class="btn btn-ghost" href="mailto:off.aadyaanil@gmail.com">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="wrap">
+  <div class="section-head">
+    <h2>What I actually do</h2>
+    <p>Less "I leverage synergies," more: I build systems that move data from one place to another without losing or lying about it along the way.</p>
+  </div>
+  <div class="about-grid">
+    <div>
+      <p>I spent two years as an <strong>SAP Basis engineer at Accenture</strong>, on call for incidents that cost real money if they ran long. That job taught me to think about uptime, failure modes, and what happens when a pipeline silently breaks at 3am — nobody watching.</p>
+      <p>Now I build the thing I used to firefight: <strong>medallion-architecture pipelines</strong> (bronze → silver → gold), streaming ingestion with Apache NiFi, batch orchestration with Airflow and dbt, landing in ClickHouse and Postgres. Most of it containerized, most of it something I've broken and fixed more than once.</p>
+      <p>I'm currently deepening the statistics and ML side at TU Wien, while keeping one foot in production work.</p>
+    </div>
+    <div class="stat-col">
+      <div><div class="stat-num">2+</div><div class="stat-label">years in production systems</div></div>
+      <div><div class="stat-num">50+</div><div class="stat-label">enterprise clients supported</div></div>
+      <div><div class="stat-num">100+</div><div class="stat-label">incidents resolved, not postponed</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="wrap">
+  <div class="section-head">
+    <h2>Where I've worked</h2>
+  </div>
+  <div class="tl-item">
+    <div class="tl-date">Apr – Jul 2026</div>
+    <div>
+      <div class="tl-role">Data Engineer Intern</div>
+      <div class="tl-org">Springer Capital, remote</div>
+      <p class="tl-desc">Built and containerized ingestion pipelines with Airflow — schema validation, transformation, idempotent loads into Postgres and MinIO. Architected a real-time + batch medallion system using NiFi for streaming and Airflow + dbt for batch, landing in ClickHouse.</p>
+      <div class="tl-tags"><span class="tag">Airflow</span><span class="tag">NiFi</span><span class="tag">dbt</span><span class="tag">ClickHouse</span><span class="tag">Docker</span></div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-date">Mar – Apr 2026</div>
+    <div>
+      <div class="tl-role">Data Analyst Intern</div>
+      <div class="tl-org">Human Initials, remote</div>
+      <p class="tl-desc">Cleaned and analyzed datasets with Python and SQL to surface trends and anomalies for stakeholder reporting.</p>
+      <div class="tl-tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Excel</span></div>
+    </div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-date">Aug 2023 – Sep 2025</div>
+    <div>
+      <div class="tl-role">SAP Basis Support Engineer</div>
+      <div class="tl-org">Accenture, Bangalore</div>
+      <p class="tl-desc">Kept SAP uptime for 50+ enterprise clients. Resolved 100+ production incidents, cut average response time 20% by tightening cross-team documentation.</p>
+      <div class="tl-tags"><span class="tag">SAP Basis</span><span class="tag">Incident Response</span><span class="tag">SLA Compliance</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head">
+    <h2>A few things I've built</h2>
+    <p>The full write-ups live on the projects page.</p>
+  </div>
+  <div class="proj-list">
+    <a class="proj-row" href="pages/projects.html#fraud">
+      <div><div class="proj-title">Referral Fraud Detection Pipeline</div><div class="proj-sub">7 datasets, Dockerized, live KPI dashboard on Vercel</div></div>
+      <div class="proj-meta">Python · Docker</div>
+    </a>
+    <a class="proj-row" href="pages/projects.html#medallion">
+      <div><div class="proj-title">Real-Time + Batch Medallion Pipeline</div><div class="proj-sub">NiFi streaming into Airflow + dbt batch, ClickHouse gold layer</div></div>
+      <div class="proj-meta">NiFi · Airflow · dbt</div>
+    </a>
+    <a class="proj-row" href="pages/projects.html#codeguard">
+      <div><div class="proj-title">CodeGuard — Security Automation</div><div class="proj-sub">Webhook DevSecOps pipeline, Copilot Hackathon finalist</div></div>
+      <div class="proj-meta">GitHub Actions</div>
+    </a>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head">
+    <h2>Stack</h2>
+  </div>
+  <div class="skill-grid">
+    <div class="skill-cat"><h3>Data Engineering</h3><ul><li>Apache Airflow</li><li>Apache NiFi</li><li>dbt</li><li>ELT / medallion architecture</li></ul></div>
+    <div class="skill-cat"><h3>Databases</h3><ul><li>PostgreSQL</li><li>ClickHouse</li><li>MySQL</li><li>MinIO</li></ul></div>
+    <div class="skill-cat"><h3>ML &amp; Analysis</h3><ul><li>scikit-learn</li><li>TensorFlow</li><li>Pandas / NumPy</li><li>Isolation Forest, anomaly detection</li></ul></div>
+    <div class="skill-cat"><h3>Cloud &amp; Ops</h3><ul><li>AWS SageMaker</li><li>GCP</li><li>Docker</li><li>GitHub Actions</li></ul></div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div class="foot-grid">
+    <div class="foot-head">Looking for data engineering and ML roles across Europe. If you're building something data-heavy, let's talk.</div>
+    <div class="foot-links">
+      <a href="mailto:off.aadyaanil@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/aadyaanilkumar">LinkedIn</a>
+      <a href="https://github.com/Aadya-Anil">GitHub</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>Aadya Anil Kumar — Vienna, Austria</span>
+    <span>Built without a template, broken in and fixed a few times</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

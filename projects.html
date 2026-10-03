@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Aadya Anil Kumar</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="../index.html">Aadya Anil Kumar</a>
+    <div class="navlinks">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a class="cta" href="mailto:off.aadyaanil@gmail.com">Say hello</a>
+    </div>
+  </nav>
+</header>
+
+<div class="wrap page-head">
+  <h1 data-decode="Things I've built, broken, and fixed">Things I've built, broken, and fixed</h1>
+  <p>Five projects, roughly in order of how proud I am of them. Each one taught me something the last one didn't.</p>
+</div>
+
+<div class="wrap">
+
+  <div class="case" id="medallion">
+    <div class="case-top">
+      <div><div class="case-kind">Industry · Springer Capital</div><div class="case-title">Real-Time + Batch Medallion Pipeline</div></div>
+    </div>
+    <p>Built a dual-path ELT system: Apache NiFi pulls live data from external APIs and streams it into a bronze layer, while Airflow + dbt run scheduled batch transforms on top — both converging into a ClickHouse gold layer for analytics. Containerized the whole stack with Docker Compose: Postgres for Airflow metadata, Redis for the Celery executor, NiFi for ingestion, ClickHouse for serving.</p>
+    <p>The part that taught me the most wasn't the happy path — it was debugging a NiFi flow file that silently failed its schema validation on every restart, and learning the hard way that named Docker volumes don't auto-seed the way you'd hope.</p>
+    <div class="case-tags"><span class="tag">Apache NiFi</span><span class="tag">Airflow</span><span class="tag">dbt</span><span class="tag">ClickHouse</span><span class="tag">Docker Compose</span></div>
+  </div>
+
+  <div class="case" id="fraud">
+    <div class="case-top">
+      <div><div class="case-kind">Industry Project</div><div class="case-title">Referral Fraud Detection Pipeline</div></div>
+    </div>
+    <p>An end-to-end pipeline to catch fraudulent referral rewards in a fintech product. Cleaned and joined 7 separate datasets, containerized the whole thing with Docker so it runs the same on any machine, and shipped a live KPI dashboard on Vercel so the fraud team could watch patterns without waiting on a report.</p>
+    <div class="case-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Docker</span><span class="tag">Vercel</span></div>
+  </div>
+
+  <div class="case" id="codeguard">
+    <div class="case-top">
+      <div><div class="case-kind">Microsoft Copilot Hackathon · Quarter Finalist</div><div class="case-title">CodeGuard — Security Automation</div></div>
+    </div>
+    <p>A webhook-driven DevSecOps pipeline: every commit triggers GitHub Actions, which runs SonarCloud and automatically flags vulnerabilities before they reach review. Built in a 48-hour hackathon, made it to the quarter finals.</p>
+    <div class="case-tags"><span class="tag">GitHub Actions</span><span class="tag">SonarCloud</span><span class="tag">Webhooks</span></div>
+  </div>
+
+  <div class="case" id="anomaly">
+    <div class="case-top">
+      <div><div class="case-kind">ML · Domain Expertise</div><div class="case-title">SAP Log Anomaly Detection</div></div>
+    </div>
+    <p>Applied an Isolation Forest model to SAP system logs to flag anomalous patterns before they became incidents. This one came out of two years of actually reading those logs under pressure — the model encodes things I used to catch by instinct.</p>
+    <div class="case-tags"><span class="tag">scikit-learn</span><span class="tag">Isolation Forest</span><span class="tag">Pandas</span></div>
+  </div>
+
+  <div class="case" id="taxi">
+    <div class="case-top">
+      <div><div class="case-kind">Personal Project</div><div class="case-title">NYC Taxi Batch Ingest</div></div>
+    </div>
+    <p>An Airflow DAG that loads raw NYC taxi trip data into a bronze table, then hands off to dbt for transformation into ClickHouse. Small in scope, but it's the DAG I use to test every change to the stack before touching anything that matters.</p>
+    <div class="case-tags"><span class="tag">Airflow</span><span class="tag">dbt</span><span class="tag">ClickHouse</span></div>
+  </div>
+
+</div>
+
+<footer class="wrap">
+  <div class="foot-grid">
+    <div class="foot-head">Want the code? Most of this lives on GitHub.</div>
+    <div class="foot-links">
+      <a href="mailto:off.aadyaanil@gmail.com">Email</a>
+      <a href="https://github.com/Aadya-Anil">GitHub</a>
+      <a href="../index.html">Back home</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>Aadya Anil Kumar — Vienna, Austria</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
